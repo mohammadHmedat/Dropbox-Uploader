@@ -1549,13 +1549,6 @@ else
     echo -ne " # Access token: "
     read -r OAUTH_ACCESS_TOKEN
 
-    echo -ne "\n > The access token is $OAUTH_ACCESS_TOKEN. Looks ok? [y/N]: "
-    read -r answer
-    if [[ $answer != "y" ]]; then
-        remove_temp_files
-        exit 1
-    fi
-
     echo "OAUTH_ACCESS_TOKEN=$OAUTH_ACCESS_TOKEN" > "$CONFIG_FILE"
     echo "   The configuration has been saved."
 
