@@ -984,12 +984,10 @@ function db_account_space
 #Account unlink
 function db_unlink
 {
-    echo -ne "Are you sure you want unlink this script from your Dropbox account? [y/n]"
-    read -r answer
-    if [[ $answer == "y" ]]; then
+   
         rm -fr "$CONFIG_FILE"
         echo -ne "DONE\n"
-    fi
+   
 }
 
 #Delete a remote file
